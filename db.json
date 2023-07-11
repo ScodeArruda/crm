@@ -1,0 +1,13 @@
+{
+  "user": [
+    {
+      "id": "ArrudaSilva",
+      "name": "Sergio Arruda",
+      "password": "123456789",
+      "email": "teste@teste.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    }
+  ]
+}

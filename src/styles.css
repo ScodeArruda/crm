@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-card {
+  margin: 2vw 35vw 0vw 35vw;
+}
+.mat-mdc-card-content:last-child {
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+.mat-mdc-form-field{
+  width: 100%;
+}
+.mdc-button{
+  margin: 5px !important;
+}
+.content{
+  display: block !important;
+}
+a{
+  /* color: white !important; */
+  padding: 1%;
+}
+
+.mat-mdc-card-header {
+  display: block !important;
+  text-align: center !important;
+}
+
+@media (min-width: 200px) and (max-width: 768px) {
+  .mat-mdc-card-title {
+    font-size: 12px;
+}
+  .mat-mdc-card {
+    margin: 0 auto;
+  }
+  .mat-mdc-card-content:last-child {
+    margin: 0;
+}
+}

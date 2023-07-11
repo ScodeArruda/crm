@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>User SignUp for SCODE-CRM</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="registerForm" (ngSubmit)="registration()">
+      <mat-form-field class="example-full-width">
+        <mat-label>User Name</mat-label>
+        <input matInput placeholder="Seu Usuário" formControlName="id">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Seu nome completo" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="seu@email.com" formControlName="email">
+      </mat-form-field>
+
+      <mat-radio-group formControlName="gender" arial-label="Selecione uma opção">
+        <mat-radio-button value="male">Homem</mat-radio-button>
+        <mat-radio-button value="female">Mulher</mat-radio-button>
+      </mat-radio-group>
+
+      <div class="ButtonRegister">
+        <button mat-raised-button color="primary">Submit</button>
+        <a href="/login" mat-raised-button color="accent">Back to Login</a>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>
