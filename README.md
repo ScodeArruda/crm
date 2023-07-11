@@ -1,7 +1,7 @@
 # SCODE CRM ROLE BASED AUTHENTICATION ANGULAR 15
 
 1 - Vamos começar um projeto do absoluto 0...
-# Pacote e comandos importantes para esses projeto 
+# Pacotes e comandos importantes para esse projeto 
   i - NPM install -g @angular/cli
   ii - npm install json-server
   iii - ng add Qangular/material
