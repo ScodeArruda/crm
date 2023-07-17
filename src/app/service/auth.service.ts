@@ -14,6 +14,10 @@ export class AuthService {
     return this.http.get(this.baseAPI)
   };
 
+  //Get All ROLE
+  getAllRole(){
+    return this.http.get('http://localhost:3000/role');
+  }
   getById(id: any){
     return this.http.get(this.baseAPI +'/'+ id)
   };

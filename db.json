@@ -6,8 +6,97 @@
       "password": "123456789",
       "email": "teste@teste.com",
       "gender": "male",
+      "role": "Sale",
+      "isActive": true
+    },
+    {
+      "id": "FabianaMartins",
+      "name": "Fabi Martins",
+      "password": "123456",
+      "email": "fabi@teste.com",
+      "gender": "female",
+      "role": "Salesss",
+      "isActive": true
+    },
+    {
+      "id": "BrunoMartins",
+      "name": "Bruno Martins",
+      "password": "123456",
+      "email": "bruno@teste.com",
+      "gender": "male",
       "role": "admin",
       "isActive": true
+    },
+    {
+      "id": "NicolasMartins",
+      "name": "Nicolas Martins",
+      "password": "123456",
+      "email": "nicolas@teste.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "AntonioMartins",
+      "name": "Antonio Martins",
+      "password": "123456",
+      "email": "antonio@teste.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": false
+    },
+    {
+      "id": "CarlosMartins",
+      "name": "Carlos Martins",
+      "password": "123456",
+      "email": "carlos@teste.com",
+      "gender": "male",
+      "role": "tester",
+      "isActive": true
+    },
+    {
+      "id": "JoaoMartins",
+      "name": "João Martins",
+      "password": "123456",
+      "email": "joao@teste.com",
+      "gender": "male",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "AlexMartins",
+      "name": "Alex Martins",
+      "password": "123456",
+      "email": "alex@teste.com",
+      "gender": "male",
+      "role": "",
+      "isActive": false
+    }
+  ],
+  "role": [
+    {
+      "id": "ar",
+      "name": "AR"
+    },
+    {
+      "id": "sales",
+      "name": "Sales"
+    },
+    {
+      "id": "telecaller",
+      "name": "Telecaller"
+    },
+    {
+      "id": "tester",
+      "name": "Tester"
+    },
+    {
+      "id": "manager",
+      "name": "Manager"
+    },
+    {
+      "id": "studant",
+      "name": "Studant"
     }
   ]
 }
