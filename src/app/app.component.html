@@ -11,7 +11,7 @@
           <a class="nav-link active" arial-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/user">User</a>
+          <a *ngIf="isAdmin" class="nav-link" href="/user">User</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/">Customer</a>
@@ -26,19 +26,6 @@
     </div>
   </div>
 </nav>
-<!-- <mat-toolbar color="primary">
-  <span class="navbar-brand">SCODE_CRM</span>
-  <span class="spacer"></span>
-  <a mat-button routerLink="/" routerLinkActive="active">Home</a>
-  <a mat-button routerLink="/register" routerLinkActive="active">Register</a>
-  <a mat-button routerLink="/login" routerLinkActive="active">Login</a>
-  <a mat-button routerLink="/user" routerLinkActive="active">User</a>
-  <span class="spacer"></span>
-  <button mat-button routerLink="/logout">Logout</button>
-</mat-toolbar> -->
-
-
-
 <div class="content" style="width: 100%;display: block;" role="main">
   <router-outlet></router-outlet>
 </div>

@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../service/auth.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-updatepopup',
@@ -13,6 +12,8 @@ import { MatSelectChange } from '@angular/material/select';
 export class UpdatepopupComponent implements OnInit {
   rolelist: any;
   editData: any;
+  selectedRole: any;
+
   constructor(
     private builder: FormBuilder,
     private service: AuthService,
@@ -26,7 +27,7 @@ export class UpdatepopupComponent implements OnInit {
       this.rolelist = res;
     });
 
-    if (this.data.usercode != null && this.data.usercode != "") {
+    if (this.data.usercode != null && this.data.usercode != '') {
       this.loaduserdata(this.data.usercode);
     }
 
@@ -47,6 +48,8 @@ export class UpdatepopupComponent implements OnInit {
       this.editData = res;
       console.log('EDITDATA', this.editData);
 
+      this.selectedRole = this.editData.role;
+
       this.registerForm.setValue({
         id: this.editData.id,
         name: this.editData.name,
@@ -59,9 +62,9 @@ export class UpdatepopupComponent implements OnInit {
     })
   }
 
-  updateUser() {
+  public updateUser() {
     if (this.registerForm.valid) {
-      this.service.updateData(this.registerForm.value.id, this.registerForm.value).subscribe(res => {
+      this.service.updateData(this.registerForm.value.role, this.registerForm.value).subscribe(res => {
         this.toaster.success("Update Successfull 0");
         this.dialogref.close();
       })
@@ -70,8 +73,11 @@ export class UpdatepopupComponent implements OnInit {
     }
   }
 
-  // onRoleSelectionChange(event: MatSelectChange) {
-  //   this.registerForm.get('role')?.setValue(event.value);
-  // }
+  public onRoleSelectionChange(value: any) {
+    this.registerForm.patchValue({
+      role: value
+    });
+  }
+
 
 }
