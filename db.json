@@ -6,7 +6,7 @@
       "password": "123456789",
       "email": "teste@teste.com",
       "gender": "male",
-      "role": "Sale",
+      "role": "admin",
       "isActive": true
     },
     {

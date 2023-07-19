@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 import { MatTableDataSource } from '@angular/material/table'
 import { MatPaginator } from '@angular/material/paginator';
@@ -11,7 +11,7 @@ import { UpdatepopupComponent } from '../updatepopup/updatepopup.component';
   templateUrl: './userlisting.component.html',
   styleUrls: ['./userlisting.component.css'],
 })
-export class UserlistingComponent {
+export class UserlistingComponent implements OnInit{
 
   userList: any;
   dataSource: any;
@@ -23,9 +23,12 @@ export class UserlistingComponent {
     private service: AuthService,
     private dialog: MatDialog,
   ) {
-    this.loadUser();
+    // this.loadUser();
   }
 
+  ngOnInit(): void {
+      this.loadUser();
+  }
   public loadUser() {
     this.service.getAll().subscribe(res => {
       this.userList = res;
@@ -36,7 +39,7 @@ export class UserlistingComponent {
   };
 
   public updateuser(code: any) {
-    this.openDialog('1000ns', '600ms', code)
+    this.openDialog('1000ms', '600ms', code)
   };
 
   public openDialog(enteranimation: any, exitanimation: any, code: string) {
@@ -51,7 +54,6 @@ export class UserlistingComponent {
 
     popup.afterClosed().subscribe(res => {
       this.loadUser()
-
     })
   };
 
